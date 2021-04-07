@@ -3,6 +3,11 @@ const common = require('./webpack.common');
 
 module.exports = merge(common, {
 	mode: 'development',
+	devServer: {
+		port: 1337,
+		contentBase: './dist',
+		open: true,
+	},
 
 	output: {
 		filename: '[name].js',
