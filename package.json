@@ -1,7 +1,6 @@
 {
   "name": "fe-boilerplate",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
@@ -44,5 +43,14 @@
   },
   "dependencies": {
     "sass": "^1.32.8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znagadeon/fe-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/znagadeon/fe-boilerplate/issues"
+  },
+  "homepage": "https://github.com/znagadeon/fe-boilerplate#readme",
+  "description": ""
 }
