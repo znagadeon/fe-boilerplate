@@ -11,6 +11,13 @@ module.exports = {
 		path: `${__dirname}/dist`,
 	},
 
+	module: {
+		rules: [{
+			test: /\.js$/,
+			loader: 'babel-loader',
+		}],
+	},
+
 	plugins: [
 		new CleanWebpackPlugin(),
 	],
