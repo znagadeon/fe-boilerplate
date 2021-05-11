@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	context: __dirname,
 	entry: {
-		bundle: './src/main.js',
+		bundle: './src/main.ts',
 	},
 
 	output: {
@@ -15,8 +15,13 @@ module.exports = {
 
 	module: {
 		rules: [{
+			test: /\.ts$/,
+			loader: 'ts-loader',
+			exclude: /node_modules/,
+		}, {
 			test: /\.js$/,
 			loader: 'babel-loader',
+			exclude: /node_modules/,
 		}, {
 			test: /\.s?css$/,
 			use: [
@@ -26,6 +31,10 @@ module.exports = {
 				'sass-loader',
 			],
 		}],
+	},
+
+	resolve: {
+		extensions: ['.ts', '.js'],
 	},
 
 	plugins: [
